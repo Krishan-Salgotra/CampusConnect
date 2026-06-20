@@ -22,11 +22,16 @@ export default function LoginPage() {
 
       localStorage.setItem("token", res.data.token);
 
+localStorage.setItem(
+  "user",
+  JSON.stringify(res.data.user)
+);
+
       setMessage("Login successful");
 
       setTimeout(() => {
-        router.push("/dashboard");
-      }, 1000);
+  router.push("/dashboard");
+}, 1000);
     } catch (error) {
       setMessage("Login failed");
     }

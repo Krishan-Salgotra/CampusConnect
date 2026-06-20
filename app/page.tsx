@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
@@ -8,13 +10,17 @@ export default function Home() {
         </h1>
 
         <div className="flex gap-4">
-          <button className="px-5 py-2 border border-gray-700 rounded-lg hover:bg-gray-900">
-            Login
-          </button>
+          <Link href="/login">
+            <button className="px-5 py-2 border border-gray-700 rounded-lg hover:bg-gray-900">
+              Login
+            </button>
+          </Link>
 
-          <button className="px-5 py-2 bg-blue-600 rounded-lg hover:bg-blue-700">
-            Register
-          </button>
+          <Link href="/register">
+            <button className="px-5 py-2 bg-blue-600 rounded-lg hover:bg-blue-700">
+              Register
+            </button>
+          </Link>
         </div>
       </nav>
 
@@ -34,13 +40,17 @@ export default function Home() {
         </p>
 
         <div className="flex gap-4">
-          <button className="px-8 py-4 bg-blue-600 rounded-xl text-lg hover:bg-blue-700">
-            Get Started
-          </button>
+          <Link href="/register">
+            <button className="px-8 py-4 bg-blue-600 rounded-xl text-lg hover:bg-blue-700">
+              Get Started
+            </button>
+          </Link>
 
-          <button className="px-8 py-4 border border-gray-700 rounded-xl text-lg hover:bg-gray-900">
-            Explore Students
-          </button>
+          <Link href="/students">
+            <button className="px-8 py-4 border border-gray-700 rounded-xl text-lg hover:bg-gray-900">
+              Explore Students
+            </button>
+          </Link>
         </div>
       </section>
 
